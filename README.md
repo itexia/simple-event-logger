@@ -61,7 +61,7 @@ Usage
 Run module migration:
 
 ```php
-php yii migrate --migrationPath=@frmaxm/logger/migrations
+php yii migrate --migrationPath=@frmaxm/simple-event-logger/migrations
 ```
 
 Info
