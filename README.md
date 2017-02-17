@@ -29,7 +29,7 @@ Edit `bootstrap` section in your application config file:
 ```php
 'bootstrap' => [
     'model_log'=>[
-        'class'=>'frmaxm\simple-event-log\ModelLogBootstrap',
+        'class'=>'frmaxm\logger\bootstrap\ModelLogBootstrap',
         'category'=>'admin',
     ],
     'log'=>[
