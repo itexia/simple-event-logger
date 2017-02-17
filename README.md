@@ -24,13 +24,9 @@ Usage:
 
 ```php
 // /backend/config/main.php
-```php
-or
-```php
 // /frontend/config/main.php
-```php
 
-```php
+
 'bootstrap' => [
     'model_log'=>[
         'class'=>'frmaxm\simple-event-log\ModelLogBootstrap',
@@ -40,11 +36,10 @@ or
         'class'=>'yii\log\Logger',
         'flushInterval' => 50,
     ],
-],
-```php
+]
 
-Section Component
-```php
+// Section Component
+
 'log' => [
     'traceLevel' => YII_DEBUG ? 3 : 0,
     'targets' => [
@@ -53,5 +48,5 @@ Section Component
             'categories' => ['model.*'],
         ],
     ],
-],
+]
 ```php
