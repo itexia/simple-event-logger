@@ -1,14 +1,13 @@
 Yii2 Simple Event Logger.
 ==================
-
 This component  is a Yii 2 wrapper of Log.
 
-Installation:
+Installation
 ------------
 
-The preferred way to install this extension is through composer.
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-install default by composer:
+Either run
 
 ```
 php composer.phar require --prefer-dist frmaxm/simple-event-log "dev-master"
@@ -20,18 +19,14 @@ or add
 "frmaxm/simple-event-log": "dev-master"
 ```
 
-to the require section of your composer.json file.
+to the require section of your `composer.json` file.
 
-Usage:
-------
+Configuration
+-------------
+
+Edit `bootstrap` section in your application config file:
 
 ```php
-/* change config files */
-
-// /backend/config/main.php
-// /frontend/config/main.php
-
-/* Add or edit main section 'bootstrap' */
 'bootstrap' => [
     'model_log'=>[
         'class'=>'frmaxm\simple-event-log\ModelLogBootstrap',
@@ -42,9 +37,11 @@ Usage:
         'flushInterval' => 50,
     ],
 ]
+```
 
-/* Add or edit 'log' component section: */
+Edit `log` component in your application config file:
 
+```php
 'log' => [
     'traceLevel' => YII_DEBUG ? 3 : 0,
     'targets' => [
@@ -54,11 +51,20 @@ Usage:
         ],
     ],
 ]
-```php
-
- Run module migration:
- ------
-
 ```
+
+Add new table `EventLog` to your database.
+
+Usage
+-----
+
+Run module migration:
+
+```php
 php yii migrate --migrationPath=@frmaxm/logger/migrations
 ```
+
+Info
+----
+
+
