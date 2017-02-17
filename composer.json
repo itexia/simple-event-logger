@@ -1,0 +1,25 @@
+{
+    "name": "frmaxm/simple-event-logger",
+    "description": "Component is a Yii 2 wrapper of Log",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "yii 2", "logger", "event", "log", "widget", "multilogger"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Max Frolov",
+            "email": "frmaxm@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/frmaxm/simple-event-logger/issues?state=open",
+        "source": "https://github.com/frmaxm/simple-event-logger"
+    },
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "frmaxm\\simple-event-logger\\": ""
+        }
+    }
+}
