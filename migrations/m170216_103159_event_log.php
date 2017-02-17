@@ -2,12 +2,21 @@
 /**
  * @author: mFrolov <frmaxm@gmail.com>
  *          16.02.17
+ *
+ * CLass m140418_204054_create_module_tbl
+ * @package frmaxm\logger\migrations
+ *
+ * Create module tables.
+ *
+ * Will be created 1 table:
+ * - `{{%event_log}}` - Event Log table.
+ *
  */
 
 use yii\db\Migration;
 use yii\db\Schema;
 
-class event_log extends Migration
+class m140418_204054_create_event_log_tbl extends Migration
 {
     public function up()
     {
