@@ -8,25 +8,30 @@ Installation:
 
 The preferred way to install this extension is through composer.
 
-Either run
-1) install default by composer:
+install default by composer:
+
 ```
 php composer.phar require --prefer-dist frmaxm/simple-event-log "dev-master"
 ```
+
 or add
+
 ```
 "frmaxm/simple-event-log": "dev-master"
 ```
+
 to the require section of your composer.json file.
 
 Usage:
 ------
 
 ```php
+/* change config files */
+
 // /backend/config/main.php
 // /frontend/config/main.php
 
-
+/* edit main section 'bootstrap' */
 'bootstrap' => [
     'model_log'=>[
         'class'=>'frmaxm\simple-event-log\ModelLogBootstrap',
@@ -38,7 +43,7 @@ Usage:
     ],
 ]
 
-// Section Component
+/* edit section 'component' */
 
 'log' => [
     'traceLevel' => YII_DEBUG ? 3 : 0,
