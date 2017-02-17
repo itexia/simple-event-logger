@@ -31,7 +31,7 @@ Usage:
 // /backend/config/main.php
 // /frontend/config/main.php
 
-/* edit main section 'bootstrap' */
+/* Add or edit main section 'bootstrap' */
 'bootstrap' => [
     'model_log'=>[
         'class'=>'frmaxm\simple-event-log\ModelLogBootstrap',
@@ -43,7 +43,7 @@ Usage:
     ],
 ]
 
-/* edit section 'component' */
+/* Add or edit 'log' component section: */
 
 'log' => [
     'traceLevel' => YII_DEBUG ? 3 : 0,
