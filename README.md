@@ -3,7 +3,7 @@ Yii2 Simple Event Logger.
 
 This component  is a Yii 2 wrapper of Log.
 
-Installation
+Installation:
 ------------
 
 The preferred way to install this extension is through composer.
