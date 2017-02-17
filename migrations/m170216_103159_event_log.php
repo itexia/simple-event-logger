@@ -1,4 +1,4 @@
-<?php namespace frmaxm\logger\migrations;
+<?php
 /**
  * @author: mFrolov <frmaxm@gmail.com>
  *          16.02.17
