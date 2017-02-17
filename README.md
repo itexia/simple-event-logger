@@ -56,7 +56,9 @@ Usage:
 ]
 ```php
 
-Run module migration:
-```php
+ Run module migration:
+ ------
+
+```
 php yii migrate --migrationPath=@frmaxm/logger/migrations
-```php
+```
