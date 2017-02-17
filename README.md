@@ -66,5 +66,6 @@ php yii migrate --migrationPath=@frmaxm/simple-event-logger/migrations
 
 Info
 ----
-
+All events on the model will be recorded in the Event Log table.
+This will allow you to see all the user's actions.
 
