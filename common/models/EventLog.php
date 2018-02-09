@@ -41,8 +41,8 @@ class EventLog extends BaseEventLog
         $_log->model_changed_attributes = Json::encode($model->getOldAttributes());
         $_log->user_ip = $userIP;
 
-        if($_log->validate()){
-            if($_log->model_class == 'common\models\EventLog'){
+        if($_log->validate()) {
+            if($_log->model_class === get_class()){
                 return false;
             }else{
                 return  $_log->save(false);
