@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist frmaxm/simple-event-log "dev-master"
+php composer.phar require --prefer-dist frmaxm/simple-event-logger "dev-master"
 ```
 
 or add
 
 ```
-"frmaxm/simple-event-log": "dev-master"
+"frmaxm/simple-event-logger": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
