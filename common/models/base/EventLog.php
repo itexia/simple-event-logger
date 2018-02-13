@@ -29,7 +29,25 @@ use yii\behaviors\TimestampBehavior;
 abstract class EventLog extends \yii\db\ActiveRecord
 {
 
-    /**
+	/**
+	 * @return null|object|\yii\db\Connection
+	 * @throws \yii\base\InvalidConfigException
+	 */
+	public static function getDb()
+	{
+		return Yii::$app->get('logDb');
+	}
+
+	/**
+	 * @throws \yii\base\InvalidConfigException
+	 */
+	protected function setDb()
+	{
+		return Yii::$app->set('logDb', $this->model_class::getDb());
+	}
+
+
+	/**
      * @inheritdoc
      */
     public static function tableName()
