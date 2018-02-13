@@ -26,8 +26,8 @@ class EventLog extends BaseEventLog
         ];
     }
 
-    public function make($type, $request, $user_id, $model, $changedAttributes, $category, $userIP){
-
+    public function make($type, $request, $user_id, $model, $changedAttributes, $category, $userIP)
+    {
         $_log = new EventLog();
 
         $_log->type = $category;
@@ -41,13 +41,12 @@ class EventLog extends BaseEventLog
         $_log->model_changed_attributes = Json::encode($model->getOldAttributes());
         $_log->user_ip = $userIP;
 
-        if($_log->validate()){
-            if($_log->model_class == 'common\models\EventLog'){
-                return false;
-            }else{
-                return  $_log->save(false);
-            }
+        $_log->setDb();
+
+        if($_log->model_class !== get_class()) {
+            return $_log->save();
         }
+
     }
 
 }

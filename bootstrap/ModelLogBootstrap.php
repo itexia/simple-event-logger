@@ -11,11 +11,12 @@ use yii\db\ActiveRecord;
 use frmaxm\logger\common\models\EventLog;
 
 
-class ModelLogBootstrap implements BootstrapInterface {
-
-
+class ModelLogBootstrap implements BootstrapInterface
+{
 	public $category = 'admin';
-	public function log($model,$changedAttributes,$type){
+
+	public function log($model,$changedAttributes,$type)
+	{
 		try {
 			if(!Yii::$app->user->isGuest){
 				(new EventLog())->make($type, Yii::$app->request, Yii::$app->user->id, $model, $changedAttributes, $this->category, \Yii::$app->request->userIP);
