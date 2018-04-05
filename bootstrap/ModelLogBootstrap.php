@@ -36,7 +36,7 @@ class ModelLogBootstrap implements BootstrapInterface
 		});
 
 		Event::on(ActiveRecord::className(), ActiveRecord::EVENT_AFTER_DELETE, function ($event) {
-			$this->log($event->sender,$event->changedAttributes,$event->name);
+			$this->log($event->sender,[],$event->name);
 		});
 	}
 
