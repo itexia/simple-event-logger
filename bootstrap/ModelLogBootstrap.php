@@ -1,4 +1,6 @@
-<?php namespace frmaxm\logger\bootstrap;
+<?php
+
+namespace frmaxm\logger\bootstrap;
 /**
  * @author mFrolov <frmaxm@gmail.com>
  * Date: 16.02.17
@@ -15,8 +17,14 @@ class ModelLogBootstrap implements BootstrapInterface
 {
 	public $category = 'admin';
 
+	public $exceptClasses = [];
+
 	public function log($model,$changedAttributes,$type)
 	{
+	  if (\in_array($model, $this->exceptClasses, true)) {
+      return;
+    }
+
 		try {
 			if(!Yii::$app->user->isGuest){
 				(new EventLog())->make($type, Yii::$app->request, Yii::$app->user->id, $model, $changedAttributes, $this->category, \Yii::$app->request->userIP);
